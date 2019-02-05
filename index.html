@@ -15,7 +15,7 @@
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
   })('data');
 
-	if($data !== null || $data !== '') window.location.href=atob($data);
+	if($data !== null && $data !== '') window.location.href=atob($data);
 	
 </script>
 </body>
