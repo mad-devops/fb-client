@@ -1,0 +1,22 @@
+<html>
+<head>
+
+</head>
+<body>
+<pre>Loading...</pre>
+<script>
+
+	var $data = (function(name) {
+    var url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var results = (new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')).exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  })('data');
+
+	if($data !== null || $data !== '') window.location.href=atob($data);
+	
+</script>
+</body>
+</html>
